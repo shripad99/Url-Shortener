@@ -40,17 +40,3 @@ Ensure you have the following installed:
 ### Auth Routes
 - `POST /create-account` → Create a new user
 - `POST /auth/login` → Log in and get JWT token
-
-### URL Routes
-- `POST /shorten` → Shorten a URL
-- `GET /:shortId` → Redirect to original URL
-- `GET /stats/:shortId` → Get visit stats
-
-## License
-This project is open-source and available under the **MIT License**.
-
-## Contact
-For any queries, reach out to:
-- **Email**: your-email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
-
