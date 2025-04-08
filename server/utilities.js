@@ -7,7 +7,7 @@ const authenticateToken = (req, res, next) => {
         return res.status(401).json({ error: true, message: "Access Denied. No token provided." });
     }
 
-    const token = authHeader.split(" ")[1]; // Bearer <token>
+    const token = authHeader.split(" ")[1]; 
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
         if (err) {
@@ -15,7 +15,7 @@ const authenticateToken = (req, res, next) => {
         }
 
         req.user = user;
-        next(); // Move to the next middleware/route
+        next(); 
     });
 };
 

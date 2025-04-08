@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const router = require("express").Router();
-const User = require("../models/User");
+const User = require("../models/user");
 
 // User Registration
 router.post("/create-account", async (req, res) => {
@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
             expiresIn: "10h",
         });
 
-        return res.json({ error: false, message: "Login Successful", accessToken });
+        return res.json({ error: false, message: "Login Successful", accessToken, userId: user._id.toString() });
 
     } catch (err) {
         console.error("Login error:", err);

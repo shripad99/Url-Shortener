@@ -33,6 +33,7 @@ const Login = () => {
       });
       if(response.data && response.data.accessToken){
         localStorage.setItem("token", response.data.accessToken);
+        localStorage.setItem("userId", response.data.userId);
         navigate("/dashboard");
       }
     }catch(error){
